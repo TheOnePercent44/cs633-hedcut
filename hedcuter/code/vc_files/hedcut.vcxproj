@@ -71,11 +71,12 @@
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
-      <AdditionalIncludeDirectories>$(OPENCV_INCLUDEDIR)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(FREEGLUT_INCLUDE);$(OPENCV_INCLUDEDIR)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalLibraryDirectories>$(OPENCVX64_LIBRARYDIR)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>$(FREEGLUT_LIBRARY);$(OPENCVX64_LIBRARYDIR)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>opencv_highgui2410d.lib;opencv_core2410d.lib;opencv_imgproc2410d.lib;freeglut.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
@@ -83,12 +84,12 @@
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
-      <AdditionalIncludeDirectories>$(OPENCV_INCLUDEDIR);../mathtool</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(GLEW_INCLUDE);$(FREEGLUT_INCLUDE);$(OPENCV_INCLUDEDIR);../mathtool</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalLibraryDirectories>$(OPENCVX64_LIBRARYDIR)</AdditionalLibraryDirectories>
-      <AdditionalDependencies>opencv_highgui2410d.lib;opencv_core2410d.lib;opencv_imgproc2410d.lib;opencv_flann2410d.lib;opencv_contrib2410d.lib;opencv_features2d2410d.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(GLEW_LIBRARY);$(FREEGLUTX64_LIBRARY);$(FREEGLUT_LIBRARY);$(OPENCVX64_LIBRARYDIR)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>freeglut.lib;glew32.lib;opencv_highgui2410d.lib;opencv_core2410d.lib;opencv_imgproc2410d.lib;opencv_flann2410d.lib;opencv_contrib2410d.lib;opencv_features2d2410d.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
