@@ -82,9 +82,10 @@
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
-      <Optimization>Disabled</Optimization>
+      <Optimization>MaxSpeed</Optimization>
       <SDLCheck>true</SDLCheck>
       <AdditionalIncludeDirectories>$(GLEW_INCLUDE);$(FREEGLUT_INCLUDE);$(OPENCV_INCLUDEDIR);../mathtool</AdditionalIncludeDirectories>
+      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
@@ -115,14 +116,14 @@
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
-      <AdditionalIncludeDirectories>$(OPENCV_INCLUDEDIR);../mathtool</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(GLEW_INCLUDE);$(FREEGLUT_INCLUDE);$(OPENCV_INCLUDEDIR);../mathtool</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
-      <AdditionalLibraryDirectories>$(OPENCVX64_LIBRARYDIR)</AdditionalLibraryDirectories>
-      <AdditionalDependencies>opencv_highgui2410.lib;opencv_core2410.lib;opencv_imgproc2410.lib;opencv_flann2410.lib;opencv_contrib2410.lib;opencv_features2d2410.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(GLEW_LIBRARY);$(FREEGLUTX64_LIBRARY);$(FREEGLUT_LIBRARY);$(OPENCVX64_LIBRARYDIR)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>freeglut.lib;glew32.lib;opencv_highgui2410.lib;opencv_core2410.lib;opencv_imgproc2410.lib;opencv_flann2410.lib;opencv_contrib2410.lib;opencv_features2d2410.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>

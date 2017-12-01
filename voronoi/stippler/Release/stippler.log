@@ -1,0 +1,25 @@
+﻿Build started 11/27/2017 1:35:29 PM.
+     1>Project "D:\Programming\cs633-hedcut\voronoi\stippler\stippler.vcxproj" on node 2 (Build target(s)).
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ID:\Programs\boost_1_65_1\ /I"D:\Programming\cs633-hedcut\voronoi\picopng" /Zi /nologo /W3 /WX- /Ox /Oi /Ot /Oy- /GL /D WIN32 /D STIPPLER_LIBRARY /D NDEBUG /D _WINDOWS /D _WINDLL /D _UNICODE /D UNICODE /Gm- /EHsc /MT /GS- /arch:SSE2 /fp:fast /Zc:wchar_t /Zc:forScope /openmp /Fo"Release\\" /Fd"Release\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt stippler.cpp bitmap.cpp stippler_api.cpp VoronoiDiagramGenerator.cpp
+         stippler.cpp
+         bitmap.cpp
+         stippler_api.cpp
+     1>stippler_api.cpp(38): warning C4996: 'strncpy': This function or variable may be unsafe. Consider using strncpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\string.h(195) : see declaration of 'strncpy'
+         VoronoiDiagramGenerator.cpp
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"D:\Programming\cs633-hedcut\voronoi\Release\stippler.dll" /INCREMENTAL:NO /NOLOGO /LIBPATH:D:\Programs\boost_1_65_1\stage\lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:\Programming\cs633-hedcut\voronoi\Release\stippler.pdb" /SUBSYSTEM:CONSOLE /OPT:REF /OPT:ICF /LTCG /TLBID:1 /DYNAMICBASE:NO /IMPLIB:"D:\Programming\cs633-hedcut\voronoi\Release\stippler.lib" /MACHINE:X86 /SAFESEH /DLL Release\stippler.obj
+         Release\bitmap.obj
+         Release\stippler_api.obj
+         Release\VoronoiDiagramGenerator.obj
+         "D:\Programming\cs633-hedcut\voronoi\Release\picopng.lib"
+            Creating library D:\Programming\cs633-hedcut\voronoi\Release\stippler.lib and object D:\Programming\cs633-hedcut\voronoi\Release\stippler.exp
+         Generating code
+         Finished generating code
+         stippler.vcxproj -> D:\Programming\cs633-hedcut\voronoi\Release\stippler.dll
+     1>Done Building Project "D:\Programming\cs633-hedcut\voronoi\stippler\stippler.vcxproj" (Build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:11.86

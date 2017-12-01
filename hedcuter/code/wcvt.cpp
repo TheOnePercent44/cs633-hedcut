@@ -148,11 +148,18 @@ void CVT::compute_weighted_cvt(cv::Mat &  img, std::vector<cv::Point2d> & sites)
 
 	float max_dist_moved = FLT_MAX;
 
+	//Generate virtual high resolution image;
+	//moved this out of move_sites. We don't need to do this a million times- it's bad enough as we do it
+	cv::Size res(img.size().width * subpixels, img.size().height * subpixels);
+	cv::Mat resizedImg(res.width, res.height, CV_LOAD_IMAGE_GRAYSCALE);
+	cv::resize(img, resizedImg, res, 0, 0, CV_INTER_LINEAR);
+
 	int iteration = 0;
 	do
 	{
 		vor(img); //compute voronoi
-		max_dist_moved = move_sites(img);
+
+		max_dist_moved = move_sites(img, resizedImg);
 
 		if (debug) std::cout << "[" << iteration << "] max dist moved = " << max_dist_moved << std::endl;
 		iteration++;

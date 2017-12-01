@@ -103,14 +103,14 @@ private:
 	}
 
 	//move the site to the center of its coverage
-	inline float move_sites(cv::Mat &  img, VorCell & cell)
+	inline float move_sites(cv::Mat &  img, cv::Mat resizedImg, VorCell & cell)
 	{
 		if (cell.coverage.empty()) std::cout << "! Error: cell.coverage " << cell.site << " size = " << cell.coverage.size() << std::endl;
 
 		//Generate virtual high resolution image;
-		cv::Size res(img.size().width * subpixels, img.size().height * subpixels);
-		cv::Mat resizedImg(res.width, res.height, CV_LOAD_IMAGE_GRAYSCALE);
-		cv::resize(img, resizedImg, res, 0, 0, CV_INTER_LINEAR);
+		//cv::Size res(img.size().width * subpixels, img.size().height * subpixels);
+		//cv::Mat resizedImg(res.width, res.height, CV_LOAD_IMAGE_GRAYSCALE);
+		//cv::resize(img, resizedImg, res, 0, 0, CV_INTER_LINEAR);
 
 		//compute weighted average
 		float total = 0;
@@ -140,15 +140,18 @@ private:
 	}
 
 	//move the sites to the centers of their coverages
-	inline float move_sites(cv::Mat &  img)
+	inline float move_sites(cv::Mat &  img, cv::Mat resizedImg)
 	{
 		float max_offset = 0;
+		//Generate virtual high resolution image;
+		
+
 		if (average_termination)
 		{
 			for (auto& cell : this->cells)
 			{
 				//cout << "coverage size=" << cvt.cells[607].coverage.size() << endl;
-				float offset = move_sites(img, cell);
+				float offset = move_sites(img, resizedImg, cell);
 				max_offset += offset;
 			}
 
@@ -159,7 +162,7 @@ private:
 			for (auto& cell : this->cells)
 			{
 				//cout << "coverage size=" << cvt.cells[607].coverage.size() << endl;
-				float offset = move_sites(img, cell);
+				float offset = move_sites(img, resizedImg, cell);
 				if (offset > max_offset)
 					max_offset = offset;
 			}

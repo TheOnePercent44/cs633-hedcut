@@ -1,0 +1,15 @@
+﻿Build started 11/28/2017 1:12:39 PM.
+     1>Project "D:\Programming\cs633-hedcut\voronoi\voronoi\voronoi.vcxproj" on node 2 (Build target(s)).
+     1>Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"D:\Programming\cs633-hedcut\voronoi\Release\voronoi.exe" /INCREMENTAL:NO /NOLOGO /LIBPATH:D:\Programs\boost_1_65_1\stage\lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:\Programming\cs633-hedcut\voronoi\Release\voronoi.pdb" /SUBSYSTEM:CONSOLE /OPT:REF /OPT:ICF /LTCG /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:\Programming\cs633-hedcut\voronoi\Release\voronoi.lib" /MACHINE:X86 /SAFESEH Release\parse_arguments.obj
+         Release\voronoi.obj
+         "D:\Programming\cs633-hedcut\voronoi\Release\picopng.lib"
+         "D:\Programming\cs633-hedcut\voronoi\Release\stippler.lib"
+         Generating code
+         Finished generating code
+         voronoi.vcxproj -> D:\Programming\cs633-hedcut\voronoi\Release\voronoi.exe
+     1>Done Building Project "D:\Programming\cs633-hedcut\voronoi\voronoi\voronoi.vcxproj" (Build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:03.46

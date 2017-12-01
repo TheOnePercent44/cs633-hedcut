@@ -67,8 +67,9 @@ void Hedcut::sample_initial_points(cv::Mat & img, int n, std::vector<cv::Point2d
 {
 	//create n points that spread evenly that are in areas of black points...
 	int count = 0;
-
-	cv::RNG rng_uniform(time(NULL));
+	//RNG_MT19937
+	cv::RNG_MT19937 rng_uniform(time(NULL));
+	//cv::RNG rng_uniform(time(NULL));
 	cv::RNG rng_gaussian(time(NULL));
 	cv::Mat visited(img.size(), CV_8U, cv::Scalar::all(0)); //all unvisited
 
@@ -118,9 +119,11 @@ void Hedcut::create_disks(cv::Mat & img, CVT & cvt)
 		{
 			cv::Point pix(resizedPix.x / subpixels, resizedPix.y / subpixels);
 			total += grayscale.at<uchar>(pix.x, pix.y);
-			r += img.at<cv::Vec3b>(pix.x, pix.y)[2];
-			g += img.at<cv::Vec3b>(pix.x, pix.y)[1];
-			b += img.at<cv::Vec3b>(pix.x, pix.y)[0];
+			//no need to load color each time... small optimization
+			cv::Vec3b color = img.at<cv::Vec3b>(pix.x, pix.y);
+			r += color[2];
+			g += color[1];
+			b += color[0];
 		}
 		float avg_v = floor(total * 1.0f/ cell.coverage.size());
 		r = floor(r / cell.coverage.size());

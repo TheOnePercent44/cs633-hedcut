@@ -1,0 +1,13 @@
+﻿Build started 11/27/2017 1:35:28 PM.
+     1>Project "D:\Programming\cs633-hedcut\voronoi\picopng\picopng.vcxproj" on node 2 (Build target(s)).
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /Zi /nologo /W3 /WX- /O2 /Oi /Oy- /GL /D _MBCS /Gm- /EHsc /MT /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Release\\" /Fd"Release\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt picopng.cpp
+         picopng.cpp
+       Lib:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\Lib.exe /OUT:"D:\Programming\cs633-hedcut\voronoi\Release\picopng.lib" /NOLOGO /LTCG Release\picopng.obj
+         picopng.vcxproj -> D:\Programming\cs633-hedcut\voronoi\Release\picopng.lib
+     1>Done Building Project "D:\Programming\cs633-hedcut\voronoi\picopng\picopng.vcxproj" (Build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:00.92
